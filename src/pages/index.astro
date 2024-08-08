@@ -1,80 +1,111 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Menu from "../components/Menu.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="space-y-5 w-full h-screen max-w-5xl flex flex-col items-center justify-center bg-gray-300">
-		<p class="text-md text-gray-600">
-			MobileMend
-		</p>
-		<h1 class="font-bold text-2xl text-gray-600 w-80 text-center">
-			MobileMend es un software para tu empresa
-		</h1>
-		<p class="text-md text-gray-600 mb-10 text-center w-3/5">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sapiente laborum iure iste minima delectus consequatur rerum recusandae inventore pariatur eius.
-		</p>
+<Layout title="Mobilmend">
+  <Menu />
+  <main
+    class="space-y-2 w-full h-screen flex flex-col items-center justify-center dark:bg-gray-700 dark:text-white text-white"
+  >
+    <h1 class="text-3xl">MobileMend</h1>
+    <h2 class="font-bold text-xl w-auto text-center">
+      El mejor software para tu empresa
+    </h2>
+    <p class="text-md py-5 text-center w-2/4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+      sapiente laborum iure iste minima delectus consequatur rerum recusandae
+      inventore pariatur eius.
+    </p>
 
-		<div class="w-8/12 h-3/5 p-3 bg-gray-400 bg-opacity-50 backdrop-filter backdrop-blur-md text-white text-shadow-md rounded-xl">
-			<div class="bg-white w-full h-full rounded-xl"></div>
-		</div>
-	</main>
+    <div
+      class="w-8/12 h-3/5 p-3 bg-gray-400 bg-opacity-50 backdrop-filter backdrop-blur-md text-white text-shadow-md rounded-xl"
+    >
+      <div class="bg-white w-full h-full rounded-xl"></div>
+    </div>
+  </main>
 
-	<section class="relative w-full h-screen bg-white p-10 flex flex-row items-center justify-center">
-		<div class="w-4/12 h-5/6 p-5 rounded-l-md bg-gray-200 flex flex-col items-start justify-between">
-			<p class="text-md text-gray-600">About us</p>
-			<h1 class="text-3xl font-semibold text-gray-600">Improving properties for you satifaction</h1>
-			<p class="text-md text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sapiente Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sapiente.Lorem.</p>
-		</div>
+  <section
+    class="relative w-full h-screen bg-gradient-to-b from-gray-700 to-white p-10 flex flex-row items-center justify-center"
+  >
+    <div
+      class="w-4/12 h-5/6 p-5 rounded-l-md bg-gray-200 flex flex-col items-start justify-between"
+    >
+      <p class="text-md text-gray-600">About us</p>
+      <h1 class="text-3xl font-semibold text-gray-600">
+        Improving properties for you satifaction
+      </h1>
+      <p class="text-md text-gray-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+        sapiente Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus sapiente.Lorem.
+      </p>
+    </div>
 
-		<div class="w-6/12 h-5/6 p-5 rounded-r-md bg-gray-200 flex flex-col items-start">
-			<div class="relative w-8/12 h-full flex flex-col justify-between">
-				<p class="text-md text-gray-600">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quisquam inventore illum ipsam quos dignissimos quia explicabo necessitatibus quibusdam iste doloribus sequi in rerum, dolores quam rem est tenetur consectetur adipisicing elit. Ut quisquam inventore illum ipsam quos dignissimos quia explicabo necessitatibus quibusdam iste doloribus sequi in rerum, dolores quam rem est tenetur vitae
-				</p>
-				<button class="text-center absolute bottom-0 right-8 bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-md self-end">
-					More about us
-				</button>
-			</div>
+    <div
+      class="w-6/12 h-5/6 p-5 rounded-r-md bg-gray-200 flex flex-col items-start"
+    >
+      <div class="relative w-8/12 h-full flex flex-col justify-between">
+        <p class="text-md text-gray-600">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quisquam
+          inventore illum ipsam quos dignissimos quia explicabo necessitatibus
+          quibusdam iste doloribus sequi in rerum, dolores quam rem est tenetur
+          consectetur adipisicing elit. Ut quisquam inventore illum ipsam quos
+          dignissimos quia explicabo necessitatibus quibusdam iste doloribus
+          sequi in rerum, dolores quam rem est tenetur vitae
+        </p>
+        <button
+          class="text-center absolute bottom-0 right-8 bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-md self-end"
+        >
+          More about us
+        </button>
+      </div>
+    </div>
+    <div class="absolute right-3 bg-gray-400 w-3/12 h-3/6"></div>
+  </section>
 
-		</div>
-		<div class="absolute right-3 bg-gray-400 w-3/12 h-3/6">
+  <section class="w-full h-screen flex items-center justify-center bg-white">
+    <div
+      class="flex flex-col w-8/12 h-4/6 items-center justify-center gap-5 rounded-md"
+    >
+      <h1 class="text-xl text-gray-600">Nuestros servicios</h1>
 
-		</div>
-	</section>
+      <div class="flex items-center justify-center gap-3">
+        <div
+          class="w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between"
+        >
+          <span class="w-10 h-10 bg-black rounded-full"></span>
+          <h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
+          <p class="text-xs text-center text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+            fugit
+          </p>
+        </div>
 
-	<section class="w-full h-screen flex items-center justify-center bg-gray-300">
-		<div class="flex flex-col bg-white w-8/12 h-4/6 items-center justify-center gap-5 rounded-md">
-			<h1 class="text-xl text-gray-600">
-				Nuestros servicios
-			</h1>
+        <div
+          class="w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between"
+        >
+          <span class="w-10 h-10 bg-black rounded-full"></span>
+          <h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
+          <p class="text-xs text-center text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+            fugit
+          </p>
+        </div>
 
-			<div class="flex items-center justify-center gap-3">
-				<div class=" w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between">
-					<span class="w-10 h-10 bg-black rounded-full"></span>
-					<h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
-					<p class="text-xs text-center text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor fugit</p>
-
-				</div>
-
-				<div class=" w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between">
-					<span class="w-10 h-10 bg-black rounded-full"></span>
-					<h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
-					<p class="text-xs text-center text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor fugit</p>
-
-				</div>
-
-				<div class=" w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between">
-					<span class="w-10 h-10 bg-black rounded-full"></span>
-					<h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
-					<p class="text-xs text-center text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor fugit</p>
-
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	
+        <div
+          class="w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between"
+        >
+          <span class="w-10 h-10 bg-black rounded-full"></span>
+          <h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
+          <p class="text-xs text-center text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+            fugit
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
-<style>
-</style>
+<style></style>
