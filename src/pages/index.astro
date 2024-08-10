@@ -1,13 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Menu.astro';
+import Menu from "../components/Menu.astro";
+import Layout from "../layouts/Layout.astro";
+import Services from "../components/Services.astro";
+import About from "../components/About.astro";
+import Main from "../components/Main.astro";
+
 ---
 
-<Layout title="Welcome to Astro.">
-    
-    <h1> hola mundo</h1>
+<Layout title="Mobilmend">
+  <section
+    class="space-y-2 pt-10 w-full h-screen flex flex-col items-center justify-center dark:bg-gray-700 dark:text-white text-white"
+  >
+    <Main/>
+  </section>
 
+  <section
+    class="relative w-full h-screen bg-gradient-to-b from-gray-700 to-white p-10 flex flex-row items-center justify-center"
+  >
+    <About/>
+  </section>
+
+  <section class="w-full h-screen flex items-center justify-center bg-white">
+    <Services/>
+  </section>
 </Layout>
 
-<style>
-</style>
+<style></style>

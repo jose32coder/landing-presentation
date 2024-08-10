@@ -4,7 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
 import Menu from '../components/Menu.astro';
 ---
 
@@ -20,7 +19,9 @@ import Menu from '../components/Menu.astro';
 	</head>
 	<body>
 		<Menu />
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>

@@ -1,0 +1,126 @@
+---
+const bgDarkBlue = "bg-[#2b3945]";
+const textWhite = "text-white";
+const borderGradient =
+  "border-b-[10px] border-gradient-to-r from-[#6ee7b7] via-[#3b82f6] to-[#9333ea]";
+{
+  fontawesome: "css";
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body
+    class={`${bgDarkBlue} ${textWhite} flex flex-col justify-center min-h-screen`}
+  >
+    <section class="w-full py-12 md:py-24 lg:py-32">
+      <div class="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-6">
+        <div class="space-y-8 text-left order-2 md:order-2">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Contacto
+            </h2>
+            <p class="mt-4 text-muted-foreground">
+              ¿Tienes una pregunta o quieres trabajar juntos? Completa el
+              formulario a continuación y nos pondremos en contacto contigo lo
+              antes posible.
+            </p>
+          </div>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="name" class="font-medium"> Nombre </label>
+                <input
+                  id="name"
+                  placeholder="Tu nombre"
+                  class="focus:border-primary focus:ring-primary input-field"
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="email" class="font-medium">
+                  Correo electrónico
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Tu correo electrónico"
+                  class="focus:border-primary focus:ring-primary input-field"
+                />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="font-medium"> Mensaje </label>
+              <textarea
+                id="message"
+                placeholder="Tu mensaje"
+                rows={5}
+                class="focus:border-primary focus:ring-primary input-field"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 sm:w-auto"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+        <div class="space-y-4 md:space-y-6 order-1 md:order-1">
+          <p class="text-muted-foreground text-base">
+            Nos pondremos en contacto contigo lo antes posible.
+          </p>
+          <div class="flex items-center gap-2">
+            <i class="fa fa-phone"></i>
+            <span class="text-muted-foreground">+1 (555) 555-5555</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa fa-envelope"></i>
+            <span class="text-muted-foreground">info@acme.com</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <i class="fa fa-twitter"></i>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <a
+              href="#"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <i class="fa fa-facebook"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a
+              href="#"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <i class="fa fa-instagram"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<style>
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+  .input-field:focus {
+    border-color: #4f46e5; /* light blue focus */
+  }
+  .border-gradient-to-r {
+    border-image: linear-gradient(to right, #6ee7b7, #3b82f6, #9333ea) 1;
+  }
+</style>
