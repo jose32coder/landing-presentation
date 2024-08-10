@@ -6,23 +6,20 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Mobilmend">
   <Menu />
   <main
-    class="space-y-2 w-full h-screen flex flex-col items-center justify-center dark:bg-gray-700 dark:text-white text-white"
+    class="space-y-2 pt-10 w-full h-screen flex flex-col items-center justify-center dark:bg-gray-700 dark:text-white text-white"
   >
     <h1 class="text-3xl">MobileMend</h1>
     <h2 class="font-bold text-xl w-auto text-center">
       El mejor software para tu empresa
     </h2>
-    <p class="text-md py-5 text-center w-2/4">
+    <p class="text-md py-2 text-center max-w-3xl">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
       sapiente laborum iure iste minima delectus consequatur rerum recusandae
       inventore pariatur eius.
     </p>
 
-    <div
-      class="w-8/12 h-3/5 p-3 bg-gray-400 bg-opacity-50 backdrop-filter backdrop-blur-md text-white text-shadow-md rounded-xl"
-    >
-      <div class="bg-white w-full h-full rounded-xl"></div>
-    </div>
+      <img class="h-4/6 object-contain rounded-md" src="/public/img/pc.jpeg" alt="" srcset="">
+
   </main>
 
   <section
@@ -66,41 +63,86 @@ import Layout from "../layouts/Layout.astro";
 
   <section class="w-full h-screen flex items-center justify-center bg-white">
     <div
-      class="flex flex-col w-8/12 h-4/6 items-center justify-center gap-5 rounded-md"
+      class="flex flex-col w-8/12 h-4/6 items-center justify-center gap-10 rounded-md"
     >
-      <h1 class="text-xl text-gray-600">Nuestros servicios</h1>
+      <h1 class="text-2xl font-semibold text-gray-600">Nuestros servicios</h1>
 
-      <div class="flex items-center justify-center gap-3">
+      <div class="w-full grid grid-cols-3 gap-1">
         <div
-          class="w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between"
+          class="bg-button group shadow-button hover:shadow-button-hover hover:scale-110 transition-all duration-300 cursor-pointer w-full h-44 p-2 gap-1 flex flex-col items-center justify-between"
         >
-          <span class="w-10 h-10 bg-black rounded-full"></span>
-          <h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
-          <p class="text-xs text-center text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-            fugit
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 group-hover:size-8 group-hover:text-blue-500 transition duration-300 ease-in-out">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+            </svg>
+          
+            <h2 class="text-md font-semibold text-gray-600">Marketing</h2>
+            <p class="max-w-48 text-xs text-center text-gray-500 flex-1">
+                Administra tu negocio
+            </p>
+        </div>
+
+        <div
+          class="bg-button group shadow-button hover:shadow-button-hover hover:scale-110 transition-all duration-300 cursor-pointer w-full h-44 p-2 gap-1 flex flex-col items-center justify-between"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 group-hover:size-8 group-hover:text-blue-500 transition duration-300 ease-in-out">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+          </svg>
+          
+          <h2 class="text-md font-semibold text-gray-600">Ventas</h2>
+          <p class="max-w-48 text-xs text-center text-gray-500 flex-1">
+            ¡Asegura la Eficiencia y el Éxito para tu tienda mayorista!
           </p>
         </div>
 
         <div
-          class="w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between"
+          class="bg-button group shadow-button hover:shadow-button-hover hover:scale-110 transition-all duration-300 cursor-pointer w-full h-44 p-2 gap-1 flex flex-col items-center justify-between"
         >
-          <span class="w-10 h-10 bg-black rounded-full"></span>
-          <h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
-          <p class="text-xs text-center text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-            fugit
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 group-hover:size-8 group-hover:text-blue-500 transition duration-300 ease-in-out">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          
+          <h2 class="text-md font-semibold text-gray-600">Experiencia</h2>
+          <p class="max-w-48 text-xs text-center text-gray-500 flex-1">
+            Aprende a mejorar tus inventarios con estrategias sencillas para tu tienda
           </p>
         </div>
 
         <div
-          class="w-3/12 py-4 px-2 gap-2 flex flex-col items-center justify-between"
+          class="bg-button group shadow-button hover:shadow-button-hover hover:scale-110 transition-all duration-300 cursor-pointer w-full h-44 p-2 gap-1 flex flex-col items-center justify-between"
         >
-          <span class="w-10 h-10 bg-black rounded-full"></span>
-          <h2 class="text-xl font-semibold text-gray-600">Titulo</h2>
-          <p class="text-xs text-center text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-            fugit
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 group-hover:size-8 group-hover:text-blue-500 transition duration-300 ease-in-out">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+            </svg>
+          
+            <h2 class="text-md font-semibold text-gray-600">Marketing</h2>
+            <p class="max-w-48 text-xs text-center text-gray-500 flex-1">
+                Administra tu negocio
+            </p>
+        </div>
+
+        <div
+          class="bg-button group shadow-button hover:shadow-button-hover hover:scale-110 transition-all duration-300 cursor-pointer w-full h-44 p-2 gap-1 flex flex-col items-center justify-between"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 group-hover:size-8 group-hover:text-blue-500 transition duration-300 ease-in-out">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+          </svg>
+          
+          <h2 class="text-md font-semibold text-gray-600">Ventas</h2>
+          <p class="max-w-48 text-xs text-center text-gray-500 flex-1">
+            ¡Asegura la Eficiencia y el Éxito para tu tienda mayorista!
+          </p>
+        </div>
+
+        <div
+          class="bg-button group shadow-button hover:shadow-button-hover hover:scale-110 transition-all duration-300 cursor-pointer w-full h-44 p-2 gap-1 flex flex-col items-center justify-between"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 group-hover:size-8 group-hover:text-blue-500 transition duration-300 ease-in-out">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+          
+          <h2 class="text-md font-semibold text-gray-600">Experiencia</h2>
+          <p class="max-w-48 text-xs text-center text-gray-500 flex-1">
+            Aprende a mejorar tus inventarios con estrategias sencillas para tu tienda
           </p>
         </div>
       </div>
