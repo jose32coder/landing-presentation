@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Services from "../components/Services.astro";
 import About from "../components/About.astro";
 import Main from "../components/Main.astro";
+import ContactUs from "../components/ContactUs.astro";
 
 ---
 
@@ -22,6 +23,10 @@ import Main from "../components/Main.astro";
 
   <section class="w-full h-screen flex items-center justify-center bg-white">
     <Services/>
+  </section>
+
+  <section class="w-full h-screen flex flex-col items-center justify-between">
+    <ContactUs/>
   </section>
 </Layout>
 
