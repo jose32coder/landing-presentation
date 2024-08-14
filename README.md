@@ -1,6 +1,6 @@
 # Astro Starter Kit: Basics
 
-![Netlify Status](https://api.netlify.com/api/v1/badges/93e8d7d9-39ec-4c37-87ce-e0ba3e9fbeb9/deploy-status?branch=master)
+![Netlify Status](https://api.netlify.com/api/v1/badges/a2bc78ca-fb1d-488c-90d0-9079ea351db2/deploy-status?branch=master)
 
 
 
