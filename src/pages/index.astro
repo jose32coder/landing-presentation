@@ -4,6 +4,9 @@ import Layout from "../layouts/Layout.astro";
 import Services from "../components/Services.astro";
 import About from "../components/About.astro";
 import Main from "../components/Main.astro";
+import CTA from "../components/CTA.astro";
+import ContactUs from "../components/ContactUs.astro";
+import Footer from "../components/Footer.astro";
 
 ---
 
@@ -15,14 +18,22 @@ import Main from "../components/Main.astro";
   </section>
 
   <section
-    class="relative w-full h-screen bg-gradient-to-b from-gray-700 to-white p-10 flex flex-row items-center justify-center"
+    class="w-full h-screen bg-gradient-to-b from-gray-700 to-white p-5 flex flex-row items-center justify-center"
   >
     <About/>
   </section>
 
-  <section class="w-full h-screen flex items-center justify-center bg-white">
+  <section class="w-full h-auto py-32 flex flex-col items-center justify-center bg-white">
     <Services/>
+    <CTA />
   </section>
+
+  <section class="w-full h-screen flex flex-col items-center justify-between" id="contact">
+    <ContactUs/>
+  </section>
+
+  <Footer />
+  
 </Layout>
 
 <style></style>

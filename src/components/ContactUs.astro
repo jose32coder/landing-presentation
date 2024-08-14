@@ -1,126 +1,98 @@
 ---
-const bgDarkBlue = "bg-[#2b3945]";
-const textWhite = "text-white";
-const borderGradient =
-  "border-b-[10px] border-gradient-to-r from-[#6ee7b7] via-[#3b82f6] to-[#9333ea]";
-{
-  fontawesome: "css";
-}
+import Card from "./Card.astro";
+import Footer from "./Footer.astro";
+
+const cards = [
+  {
+    titulo: "Telefono",
+    descripcion: "+58 4125488569",
+    svg: "img/block.svg",
+  },
+  {
+    titulo: "Direccion",
+    descripcion: "Calle 1, avenida principal",
+    svg: "img/money.svg",
+  },
+  {
+    titulo: "Quetal",
+    descripcion: "ejemplo 03",
+    svg: "img/location.svg",
+  },
+];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body
-    class={`${bgDarkBlue} ${textWhite} flex flex-col justify-center min-h-screen`}
-  >
-    <section class="w-full py-12 md:py-24 lg:py-32">
-      <div class="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-6">
-        <div class="space-y-8 text-left order-2 md:order-2">
-          <div>
-            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Contacto
-            </h2>
-            <p class="mt-4 text-muted-foreground">
-              ¿Tienes una pregunta o quieres trabajar juntos? Completa el
-              formulario a continuación y nos pondremos en contacto contigo lo
-              antes posible.
-            </p>
-          </div>
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div class="space-y-2">
-                <label for="name" class="font-medium"> Nombre </label>
-                <input
-                  id="name"
-                  placeholder="Tu nombre"
-                  class="focus:border-primary focus:ring-primary input-field"
-                />
-              </div>
-              <div class="space-y-2">
-                <label for="email" class="font-medium">
-                  Correo electrónico
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Tu correo electrónico"
-                  class="focus:border-primary focus:ring-primary input-field"
-                />
-              </div>
-            </div>
-            <div class="space-y-2">
-              <label for="message" class="font-medium"> Mensaje </label>
-              <textarea
-                id="message"
-                placeholder="Tu mensaje"
-                rows={5}
-                class="focus:border-primary focus:ring-primary input-field"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 sm:w-auto"
-            >
-              Enviar
-            </button>
-          </form>
-        </div>
-        <div class="space-y-4 md:space-y-6 order-1 md:order-1">
-          <p class="text-muted-foreground text-base">
-            Nos pondremos en contacto contigo lo antes posible.
-          </p>
-          <div class="flex items-center gap-2">
-            <i class="fa fa-phone"></i>
-            <span class="text-muted-foreground">+1 (555) 555-5555</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i class="fa fa-envelope"></i>
-            <span class="text-muted-foreground">info@acme.com</span>
-          </div>
-          <div class="flex items-center gap-4">
-            <a
-              href="#"
-              class="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <i class="fa fa-twitter"></i>
-              <span class="sr-only">Twitter</span>
-            </a>
-            <a
-              href="#"
-              class="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <i class="fa fa-facebook"></i>
-              <span class="sr-only">Facebook</span>
-            </a>
-            <a
-              href="#"
-              class="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <i class="fa fa-instagram"></i>
-              <span class="sr-only">Instagram</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
+  <div class="flex flex-col items-center gap-0">
+    <h2 class="text-3xl font-semibold">Contactanos</h2>
+    <p class="text-md text-gray-600">
+      Estamos aqui para ayudarte, envianos tus consultas
+    </p>
+  </div>
 
-<style>
-  .input-field {
-    width: 100%;
-    padding: 8px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    transition: border-color 0.3s;
-  }
-  .input-field:focus {
-    border-color: #4f46e5; /* light blue focus */
-  }
-  .border-gradient-to-r {
-    border-image: linear-gradient(to right, #6ee7b7, #3b82f6, #9333ea) 1;
-  }
-</style>
+  <form
+    class="mt-5 w-8/12 h-4/6 border-2 border-gray-200 p-5 rounded flex flex-col justify-around"
+    action=""
+  >
+    <div class="grid grid-cols-2 gap-3">
+      <div class="flex flex-col space-y-2 w-full">
+        <label for="Nombre">Nombre</label>
+        <input
+          type="text"
+          class="shadow-sm appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          name=""
+          id="Nombre"
+          placeholder="Ingresa tu nombre"
+        />
+      </div>
+
+      <div class="flex flex-col space-y-2 w-full">
+        <label for="Correo">Correo electronico</label>
+        <input
+          type="text"
+          class="shadow-sm appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          name=""
+          id="Correo"
+          placeholder="Ingresa tu correo"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-2">
+      <label for="Asunto">Asunto</label>
+      <input
+        type="text"
+        class="shadow-sm appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        name=""
+        id="Asunto"
+        placeholder="Escribe tu asunto"
+      />
+    </div>
+
+    <div class="flex flex-col space-y-2 h-2/6">
+      <label for="Mensaje">Mensaje</label>
+      <textarea
+        class="shadow-sm appearance-none border border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent h-5/6 resize-none"
+        name=""
+        id="Mensaje"
+        placeholder="Escribe tu mensaje"></textarea>
+    </div>
+    <button
+      class="w-full text-center bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md"
+      type="button"
+    >
+      Enviar
+    </button>
+  </form>
+
+  <div class="w-full px-10 h-2/6 flex items-center gap-2 justify-around">
+    <Fragment>
+      {
+        cards.map((elemento) => (
+          <Card
+            titulo={elemento.titulo}
+            descripcion={elemento.descripcion}
+            svg={elemento.svg}
+          />
+        ))
+      }
+    </Fragment>
+  </div>
