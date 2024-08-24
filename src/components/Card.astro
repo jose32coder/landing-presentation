@@ -2,17 +2,29 @@
 interface Props {
 	titulo: string;
 	svg: string;
-	descripcion: string;
+    // con el signo de interrogacion hacemos que sea opcionaa colocar el prop
+	descripcion?: string;
+    icons?: {icon: string, url: string}[];
 }
-const { titulo, svg, descripcion } = Astro.props;
+const { titulo, svg, descripcion, icons} = Astro.props;
 ---
 
 
-<div class="bg-white bg-button group shadow-button hover:shadow-button-hover hover:scale-110 hover:border-blue-500 transition-all duration-300 flex flex-col justify-around py-2 px-4 w-full h-5/6 md:h-2/6 rounded shadow-sm appearance-none border-2 border-blue-300 justify-self-center">
+<div class="bg-white bg-button group shadow-button hover:shadow-button-hover hover:scale-110 hover:border-blue-500 transition-all duration-300 flex flex-col justify-around py-2 px-4 w-full h-5/6 rounded shadow-sm appearance-none border-2 border-blue-300 justify-self-center">
     <div class="flex items-center justify-between ">
         <h2 class="font-semibold">{titulo}</h2>
-        <img src={svg} alt="" class="transition duration-300 ease-in-out">
+        <img alt="" class={svg}>
     </div>
+    {icons && icons.length > 0 ? (
+        <div class="flex space-x-2 mt-4">
+            {icons.map(({icon,url}) => (
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                    <i class={icon}></i>
+                </a>
+            ))}
+        </div>
+    ) : (
     <p class="text-sm text-gray-600">{descripcion}</p>
+    )}
 
 </div>

@@ -5,17 +5,24 @@ const cards = [
   {
     titulo: "Telefono",
     descripcion: "+58 4125488569",
-    svg: "img/block.svg",
+    svg: "fa-solid fa-phone",
+    icons: undefined,
   },
   {
     titulo: "Direccion",
     descripcion: "Calle 1, avenida principal",
-    svg: "img/money.svg",
+    svg: "fa-solid fa-location-crosshairs",
+    icons: undefined,
   },
   {
-    titulo: "Quetal",
-    descripcion: "ejemplo 03",
-    svg: "img/location.svg",
+    titulo: "Redes",
+    svg: "fa-solid fa-hashtag",
+    icons: [
+      {icon: "fa-brands fa-facebook", url: "https://www.facebook.com"},
+      {icon: "fa-brands fa-instagram", url: "https://www.instagram.com"},
+      {icon: "fa-brands fa-whatsapp", url: "https://www.wa.me"},
+    ],
+
   },
 ];
 ---
@@ -31,7 +38,7 @@ const cards = [
     class="w-full md:9/12 lg:w-8/12 h-4/6 border-2 border-gray-200 hover:border-blue-500 p-5 rounded flex flex-col justify-around"
     action=""
   >
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-7 sm:gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 md:gap-7">
       <div class="flex flex-col space-y-2 w-full">
         <label for="Nombre">Nombre</label>
         <input
@@ -88,6 +95,7 @@ const cards = [
         titulo={elemento.titulo}
         descripcion={elemento.descripcion}
         svg={elemento.svg}
+        icons={elemento.icons}
       />
     ))}
   </div>
